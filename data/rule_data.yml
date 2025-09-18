@@ -3,3 +3,33 @@ rule_data:
   # Usage: https://conforma.dev/docs/policy/packages/release_base_image_registries.html#base_image_registries__allowed_registries_provided
   allowed_registry_prefixes:
   - quay.io/fedora/fedora
+  
+  # Known RPM repositories used to validate sources.
+  # Generated with:
+  # find ./fedora-coreos-config -name "*.repo" -exec grep -oP '\[\K[^]]+' {} \; | sort | uniq
+  # Note: "copr:copr.fedorainfracloud.org:group_CoreOS:continuous" is ignored (used only by COSA).
+  known_rpm_repositories:
+    - fedora
+    - fedora-archive
+    - fedora-archive-updates
+    - fedora-candidate-compose
+    - fedora-coreos-continuous
+    - fedora-coreos-pool
+    - fedora-devel
+    - fedora-modular
+    - fedora-next
+    - fedora-next-updates
+    - fedora-next-updates-testing
+    - fedora-rawhide
+    - fedora-riscv
+    - fedora-riscv-debuginfo
+    - fedora-riscv-koji
+    - fedora-riscv-source
+    - fedora-riscv-staging
+    - fedora-riscv-staging-debuginfo
+    - fedora-riscv-staging-source
+    - fedora-updates
+    - fedora-updates-modular
+    - fedora-updates-testing
+    - fedora-updates-testing-modular
+    - rawhide
