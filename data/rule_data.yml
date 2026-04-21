@@ -4,6 +4,8 @@ rule_data:
   allowed_registry_prefixes:
   - quay.io/fedora/fedora
   - quay.io/bootc-devel/fedora-bootc-43-standard
+  - quay.io/bootc-devel/fedora-bootc-44-standard
+  - quay.io/bootc-devel/fedora-bootc-rawhide-standard
   
   # Known RPM repositories used to validate sources.
   # Generated with:
